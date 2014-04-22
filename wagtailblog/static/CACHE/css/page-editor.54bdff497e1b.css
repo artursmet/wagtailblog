@@ -1,0 +1,304 @@
+/* paths */
+/* grid settings */
+/* screen breakpoints */
+/* 800px */
+/* 900px */
+/* 1200px */
+/* 1600px */
+/* colours */
+/* darker to lighter */
+/* misc sizing */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+  .visuallyhidden:active, .visuallyhidden:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
+
+.visuallyvisible {
+  clip: none;
+  height: auto;
+  width: auto;
+  margin: auto;
+  overflow: visible;
+  position: initial; }
+
+/* Utility variable - you should never need to modify this */
+/* Ensure grid columns are set to border-boxes. This is essential */
+/* Our row container */
+/* Our column container */
+/* Push adds left padding */
+/* Pull adds right padding */
+/* only used in places where padding not applied to same elements as row or row-flush 
+ * most of the time this class should be applied directly to the html elements */
+.page-editor .content-wrapper {
+  margin-bottom: 10em; }
+
+.objects {
+  background: url("/static/wagtailadmin/images/bg-dark-diag.svg"); }
+
+.object {
+  position: relative;
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+  /* Special full-width, one-off fields i.e a single text or textarea input */
+  /* removes top padding from multiples used within another panel */ }
+  @media screen and (min-width: 50em) {
+    .object {
+      padding-left: 50px;
+      padding-right: 50px; } }
+  .object:first-child {
+    border: 0; }
+  .object.focused {
+    border-color: #54d0d0; }
+  .object fieldset {
+    padding-top: 4em;
+    padding-left: 0;
+    padding-right: 0; }
+  .object .object-help {
+    display: block;
+    position: relative;
+    z-index: 1;
+    top: 1em;
+    padding-right: 1.5%;
+    margin-top: 4em;
+    opacity: 1;
+    padding-left: 3em; }
+    .object .object-help:before {
+      display: block;
+      float: left;
+      content: "?";
+      border: 1px solid #666666;
+      color: #666666;
+      -webkit-border-radius: 100%;
+      border-radius: 100%;
+      height: 15px;
+      width: 15px;
+      line-height: 15px;
+      text-align: center;
+      font-size: 1.1em;
+      margin-left: -2em;
+      margin-top: 0.3em; }
+  .object:hover .object-help {
+    opacity: 1; }
+  .object > h2, .object.single-field label {
+    -webkit-font-smoothing: auto;
+    background: #d9d9d9;
+    text-transform: uppercase;
+    padding: 0.9em 0 0.9em 4em;
+    font-size: 0.95em;
+    margin: 0 0 0.2em 0;
+    line-height: 1.5em;
+    font-weight: normal;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.4); }
+    .object > h2:before, .object.single-field label:before {
+      font-family: wagtail;
+      text-transform: none;
+      content: "q";
+      text-align: center;
+      display: block;
+      position: absolute;
+      z-index: 2;
+      font-size: 2em;
+      top: 0px;
+      line-height: 1.6em;
+      left: 0px;
+      width: 1.7em;
+      opacity: 0.15;
+      padding: 0;
+      margin: 0;
+      cursor: pointer; }
+  .object .richtext {
+    padding-top: 1em;
+    /* to provide space for editor buttons */
+    padding-bottom: 1em; }
+    .object .richtext.inEditMode {
+      padding-top: 5em;
+      /* to provide space for editor buttons */
+      padding-bottom: 2em; }
+  .object.single-field h2, .object.single-field .object-help {
+    display: none;
+    /* The field label is used instead */ }
+  .object.full h2 {
+    display: none;
+    /* The field label is used instead */ }
+  .object.full .object-help {
+    display: block; }
+  .object.full fieldset {
+    display: block;
+    float: none; }
+    .object.full fieldset .help {
+      display: none; }
+  .object.full li {
+    padding: 0; }
+  .object.full input, .object.full textarea, .object.full .richtext {
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    font-family: Bitter, Georgia, serif;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    font-size: 1.2em;
+    line-height: 1.6em; }
+    @media screen and (min-width: 50em) {
+      .object.full input, .object.full textarea, .object.full .richtext {
+        padding-left: 50px;
+        padding-right: 50px; } }
+  .object.full .richtext {
+    padding-top: 3em;
+    /* to provide space for editor buttons */
+    padding-bottom: 3em; }
+    .object.full .richtext.inEditMode {
+      padding-top: 5em;
+      /* to provide space for editor buttons */
+      padding-bottom: 5em; }
+  .object.full .error-message {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 2em; }
+    @media screen and (min-width: 50em) {
+      .object.full .error-message {
+        padding-left: 50px;
+        padding-right: 50px; } }
+  .object.full .error, .object.full .error input, .object.full .error textarea, .object.full .error .richtext {
+    background-color: #feedee; }
+  .object.title input, .object.title textarea {
+    font-size: 2em;
+    padding-top: 2em; }
+  .object.title input {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em; }
+  .object .multiple {
+    padding: 4.5em 0 0 0; }
+    .object .multiple fieldset {
+      padding-top: 0;
+      padding-bottom: 0; }
+  .object .fields {
+    max-width: 100%; }
+  .object .fields .multiple {
+    padding-top: 0; }
+  .object .add {
+    padding-top: 1em; }
+  .object.empty {
+    border-bottom: 1px solid white;
+    /* wrapper around add button for mutliple objects. Default version is wordless plus button for contracted groups of fields */ }
+    .object.empty > h2, .object.empty.single-field label {
+      margin: 0 0;
+      border-bottom: 1px solid white; }
+    .object.empty .add {
+      position: relative;
+      z-index: 2;
+      top: 0px;
+      left: 0px;
+      width: 3.3em;
+      background-color: #43b1b0;
+      padding: 0;
+      margin: 0 0 0 -20px;
+      cursor: pointer; }
+      body.ready .object.empty .add {
+        -webkit-transition: background-color 0.2s ease;
+        -moz-transition: background-color 0.2s ease;
+        -o-transition: background-color 0.2s ease;
+        transition: background-color 0.2s ease; }
+      .object.empty .add a {
+        font-size: 0em;
+        line-height: 0;
+        overflow: visible;
+        display: block; }
+        .object.empty .add a:before {
+          position: relative;
+          color: white;
+          padding: 0;
+          line-height: 1.8em;
+          /* specific height required as parent 'a' has no height */
+          font-size: 1.4rem;
+          width: 100%;
+          background-color: transparent; }
+    .object.empty .multiple {
+      padding: 0;
+      max-height: 0px; }
+
+/* styles applied to an element as it is being reordered */
+.preview {
+  padding-top: 1em;
+  padding-bottom: 0.5em; }
+
+@media screen and (min-width: 50em) {
+  .object fieldset {
+    max-width: 1024px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 83.33333%;
+    padding-right: 1.5%;
+    padding-left: 1.5%;
+    padding-left: 0;
+    padding-right: 0; }
+  .object .object-help {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 16.66667%;
+    padding-right: 1.5%;
+    padding-left: 1.5%;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 1em;
+    padding-right: 1.5%;
+    float: right;
+    margin-top: 4em;
+    opacity: 0;
+    padding-left: 3em; }
+  .object.full fieldset {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 91.66667%;
+    padding-right: 1.5%;
+    padding-left: 1.5%;
+    margin-left: -51px;
+    padding: 3.2em 0 0 0; }
+  .object.full input, .object.full textarea, .object.full .richtext {
+    border-width: 0 1px; }
+  .object.full .field {
+    padding: 0; }
+  .object .multiple {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 83.33333%;
+    padding-right: 1.5%;
+    padding-left: 1.5%;
+    padding-left: 0;
+    padding-right: 0; }
+  .object.empty .add {
+    margin: 0 0 0 -50px; } }

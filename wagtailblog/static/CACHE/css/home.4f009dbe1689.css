@@ -1,0 +1,126 @@
+/* paths */
+/* grid settings */
+/* screen breakpoints */
+/* 800px */
+/* 900px */
+/* 1200px */
+/* 1600px */
+/* colours */
+/* darker to lighter */
+/* misc sizing */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+  .visuallyhidden:active, .visuallyhidden:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
+
+.visuallyvisible {
+  clip: none;
+  height: auto;
+  width: auto;
+  margin: auto;
+  overflow: visible;
+  position: initial; }
+
+/* Utility variable - you should never need to modify this */
+/* Ensure grid columns are set to border-boxes. This is essential */
+/* Our row container */
+/* Our column container */
+/* Push adds left padding */
+/* Pull adds right padding */
+/* only used in places where padding not applied to same elements as row or row-flush 
+ * most of the time this class should be applied directly to the html elements */
+h1 {
+  font-weight: 300;
+  font-size: 2.2em; }
+
+header .col1 {
+  width: 50px;
+  margin-right: 1em;
+  padding: 0; }
+header h1, header h2 {
+  color: white; }
+header h2 {
+  text-transform: none; }
+
+.panel {
+  margin-bottom: 4em; }
+
+.summary {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  /*max-width: $grid-max-width; NO MAX WIDTH*/
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0;
+  padding-left: 0;
+  background-color: #fafafa;
+  margin-bottom: 2em; }
+  .summary:before, .summary:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  .summary:after {
+    clear: both; }
+  .summary h2 {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; }
+    .summary h2:active, .summary h2:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto; }
+  .summary ul {
+    width: 100%; }
+    .summary ul, .summary ul ul, .summary ul li {
+      list-style-type: none;
+      font-style: normal; }
+    .summary ul, .summary ul ul {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 0; }
+  .summary li {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline;
+    float: left;
+    width: 33.33333%;
+    padding-right: 1.5%;
+    padding-left: 1.5%;
+    padding-top: 3em;
+    padding-bottom: 3em; }
+    .summary li:first-child {
+      padding-left: 5.83333%; }
+  .summary li:before {
+    opacity: 0.2;
+    font-size: 6em;
+    float: left; }
+  .summary span {
+    font-family: Bitter, Georgia, serif;
+    display: block;
+    font-size: 4em;
+    line-height: 1em;
+    font-weight: 300; }
