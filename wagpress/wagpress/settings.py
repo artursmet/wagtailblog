@@ -129,8 +129,10 @@ WAGTAIL_SITE_NAME = 'wagtaildemo'
 
 # Override the search results template for wagtailsearch
 WAGTAILSEARCH_RESULTS_TEMPLATE = 'search_results.html'
+POSTS_PER_PAGE = 10
 
 SOUTH_MIGRATION_MODULES = {
         'taggit': 'taggit.south_migrations',
     }
+
 

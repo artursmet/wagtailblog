@@ -23,11 +23,22 @@
     {% endfor %}
 
     <!-- pager -->
+
     <ul class="pager">
-        <li class="previous"><a href="#">&larr; Older</a>
-        </li>
-        <li class="next"><a href="#">Newer &rarr;</a>
-        </li>
+        {% if posts.has_previous %}
+        <li class="previous"><a href=?page={{ posts.previous_page_number }}">&larr; Previous</a></li>
+        {% endif %}
+
+        {% if posts.has_next %}
+            <li class="next">
+            <a href="?page={{ posts.next_page_number }}">Next &rarr;</a>
+            </li>
+        {% endif %}
     </ul>
+    <span class="current">
+        Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
+    </span>
+
+
 
 {% endblock %}

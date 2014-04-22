@@ -1,6 +1,8 @@
+from django.conf import settings
 from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 from django.shortcuts import render
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from modelcluster.fields import ParentalKey
 from wagtail.wagtailcore.models import Page, Orderable
 from wagtail.wagtailcore.fields import RichTextField
@@ -126,6 +128,15 @@ class BlogIndexPage(Page):
 
     def serve(self, request, **kwargs):
         posts = BlogEntry.objects.filter(live=True)
+        paginate_by = getattr(settings, 'POSTS_PER_PAGE', 25)
+        paginator = Paginator(posts, paginate_by)
+        page = request.GET.get('page')
+        try:
+            posts = paginator.page(page)
+        except PageNotAnInteger:
+            posts = paginator.page(1)
+        except EmptyPage:
+            posts = paginator.page(paginator.num_pages)
 
         return render(request, self.template, {'posts': posts,
                                                'self': self})
