@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load rich_text %}
+{% block content %}
+
+    <h1><a href="#">{{ self.title }}</a>
+    </h1>
+    <p class="lead">by <a href="index.php">{{ self.owner }}</a>
+    </p>
+    <hr>
+    <p>
+        <span class="glyphicon glyphicon-time"></span>
+        Posted on {{ self.created}}
+    </p>
+    {{ self.intro|richtext }}
+    <hr>
+    {{ self.body|richtext }}
+
+{% endblock %}
