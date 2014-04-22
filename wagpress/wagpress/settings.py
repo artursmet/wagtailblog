@@ -114,6 +114,7 @@ TEMPLATE_DIRS = (
 from django.conf import global_settings
 TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
     'django.core.context_processors.request',
+    'blog.context_processors.categories'
 )
 
 COMPRESS_PRECOMPILERS = (

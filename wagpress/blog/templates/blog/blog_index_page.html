@@ -3,7 +3,7 @@
 
 {% block content %}
     {% for post in posts %}
-        <h1><a href="#">{{ post.title }}</a>
+        <h1><a href="{{ post.url }}">{{ post.title }}</a>
         </h1>
         <p class="lead">by <a href="/">{{ post.owner }}</a>
         </p>
